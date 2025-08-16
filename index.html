@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inosoft - Software That Scales With Your Ambition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'inosoft-blue': '#03bdbe',
+                        'inosoft-light-blue': '#04d4d6',
+                        'inosoft-accent': '#03bdbe',
+                        'inosoft-dark-blue': '#24417e',
+                        'inosoft-warm': '#dc2626'
+                    },
+                    fontFamily: {
+                        'heading': ['Inter', 'sans-serif'],
+                        'body': ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #03bdbe 0%, #04d4d6 100%);
+        }
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .batik-accent {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2303bdbe' fill-opacity='0.1'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 smooth-scroll">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="text-2xl font-heading font-bold text-inosoft-blue">
+                            <span class="text-inosoft-accent">I</span>nosoft
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 hover:text-inosoft-blue px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-inosoft-blue px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <a href="#services" class="nav-link text-gray-700 hover:text-inosoft-blue px-3 py-2 text-sm font-medium transition-colors">Services</a>
+                        <a href="#expertise" class="nav-link text-gray-700 hover:text-inosoft-blue px-3 py-2 text-sm font-medium transition-colors">Expertise</a>
+                        <a href="#portfolio" class="nav-link text-gray-700 hover:text-inosoft-blue px-3 py-2 text-sm font-medium transition-colors">Portfolio</a>
+                        <a href="#careers" class="nav-link text-gray-700 hover:text-inosoft-blue px-3 py-2 text-sm font-medium transition-colors">Careers</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-inosoft-blue px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-inosoft-blue">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-inosoft-blue">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-inosoft-blue">About</a>
+                <a href="#services" class="block px-3 py-2 text-gray-700 hover:text-inosoft-blue">Services</a>
+                <a href="#expertise" class="block px-3 py-2 text-gray-700 hover:text-inosoft-blue">Expertise</a>
+                <a href="#portfolio" class="block px-3 py-2 text-gray-700 hover:text-inosoft-blue">Portfolio</a>
+                <a href="#careers" class="block px-3 py-2 text-gray-700 hover:text-inosoft-blue">Careers</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-inosoft-blue">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="gradient-bg hero-pattern min-h-screen flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center text-white">
+                <h1 class="font-heading text-4xl md:text-6xl font-bold mb-6 fade-in">
+                    Software That Scales<br>With Your <span class="text-inosoft-accent">Ambition</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 fade-in">
+                    Building enterprise solutions with local agility & global standards since 2006. 
+                    Proudly serving from Surabaya, Indonesia to the world.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16 fade-in">
+                    <a href="#services" class="bg-white hover:bg-gray-100 text-inosoft-blue px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+                        Explore Services
+                    </a>
+                    <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-inosoft-blue text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+                        Contact Us
+                    </a>
+                </div>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto fade-in">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-white mb-2">10+</div>
+                        <div class="text-lg opacity-90">Countries Served</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-white mb-2">100+</div>
+                        <div class="text-lg opacity-90">Projects Delivered</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-white mb-2">50+</div>
+                        <div class="text-lg opacity-90">Expert Engineers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">End-to-end software development for ambitious organizations</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow fade-in border-l-4 border-inosoft-blue">
+                    <div class="text-4xl mb-4">🌐</div>
+                    <h3 class="font-heading text-xl font-semibold mb-4 text-gray-900">Custom Web & Mobile Development</h3>
+                    <p class="text-gray-600 mb-4">Scalable applications built with modern technologies and best practices.</p>
+                    <a href="#services" class="text-inosoft-blue hover:text-inosoft-dark-blue font-semibold">Learn More →</a>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow fade-in border-l-4 border-inosoft-dark-blue">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="font-heading text-xl font-semibold mb-4 text-gray-900">Microsoft D365 & Power Apps</h3>
+                    <p class="text-gray-600 mb-4">Enterprise solutions that streamline your business processes.</p>
+                    <a href="#services" class="text-inosoft-blue hover:text-inosoft-dark-blue font-semibold">Learn More →</a>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow fade-in border-l-4 border-inosoft-blue">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="font-heading text-xl font-semibold mb-4 text-gray-900">IT Offshore Services</h3>
+                    <p class="text-gray-600 mb-4">Dedicated development teams that extend your capabilities.</p>
+                    <a href="#services" class="text-inosoft-blue hover:text-inosoft-dark-blue font-semibold">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Founded in 2006 in Surabaya, Inosoft began as a boutique development house with a vision to bridge local Indonesian talent with global technology standards. Over 18 years, we've evolved into a trusted offshore development center serving clients across 10+ countries.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Our journey from a small team to 50+ expert engineers reflects our commitment to growth, innovation, and delivering software that truly scales with our clients' ambitions.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-inosoft-blue rounded-full mr-4"></div>
+                            <span class="font-semibold text-gray-900">Mission:</span>
+                            <span class="ml-2 text-gray-600">To empower society through digital transformation</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-inosoft-blue rounded-full mr-4"></div>
+                            <span class="font-semibold text-gray-900">Vision:</span>
+                            <span class="ml-2 text-gray-600">Scaling systems with clients' ambitions</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <div class="bg-gradient-to-br from-inosoft-dark-blue to-inosoft-blue p-8 rounded-2xl text-white">
+                        <h3 class="font-heading text-2xl font-bold mb-6">Our Values</h3>
+                        <div class="grid grid-cols-1 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                                <span>Collaboration</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                                <span>Agility</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                                <span>Responsibility</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                                <span>Initiative</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                                <span>Noteworthiness</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                                <span>Groundedness</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
+                                <span>Caring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Timeline -->
+            <div class="mt-20 fade-in">
+                <h3 class="font-heading text-2xl font-bold text-center mb-12 text-gray-900">Our Journey</h3>
+                <div class="max-w-4xl mx-auto">
+                    <div class="relative">
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-inosoft-blue"></div>
+                        
+                        <div class="space-y-12">
+                            <div class="flex items-center">
+                                <div class="w-1/2 pr-8 text-right">
+                                    <h4 class="font-semibold text-lg text-gray-900">2006</h4>
+                                    <p class="text-gray-600">Founded in Surabaya as a boutique development house</p>
+                                </div>
+                                <div class="w-4 h-4 bg-inosoft-blue rounded-full relative z-10"></div>
+                                <div class="w-1/2 pl-8"></div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-1/2 pr-8"></div>
+                                <div class="w-4 h-4 bg-inosoft-blue rounded-full relative z-10"></div>
+                                <div class="w-1/2 pl-8">
+                                    <h4 class="font-semibold text-lg text-gray-900">2012</h4>
+                                    <p class="text-gray-600">Expanded to serve international clients</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-1/2 pr-8 text-right">
+                                    <h4 class="font-semibold text-lg text-gray-900">2018</h4>
+                                    <p class="text-gray-600">Became Microsoft Partner specializing in D365</p>
+                                </div>
+                                <div class="w-4 h-4 bg-inosoft-blue rounded-full relative z-10"></div>
+                                <div class="w-1/2 pl-8"></div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-1/2 pr-8"></div>
+                                <div class="w-4 h-4 bg-inosoft-blue rounded-full relative z-10"></div>
+                                <div class="w-1/2 pl-8">
+                                    <h4 class="font-semibold text-lg text-gray-900">2024</h4>
+                                    <p class="text-gray-600">50+ engineers serving 10+ countries with 100+ projects delivered</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">End-to-end software development for ambitious organizations</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow fade-in">
+                    <div class="flex items-center mb-6">
+                        <div class="text-4xl mr-4">🌐</div>
+                        <h3 class="font-heading text-2xl font-semibold text-gray-900">Custom Web & Mobile Development</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Build scalable web applications and mobile apps using cutting-edge technologies. From MVP to enterprise-scale solutions.</p>
+                    <div class="text-sm text-gray-500 mb-4">Example: E-commerce platform serving 100K+ users</div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-inosoft-blue text-white px-3 py-1 rounded-full text-sm">React</span>
+                        <span class="bg-inosoft-blue text-white px-3 py-1 rounded-full text-sm">Node.js</span>
+                        <span class="bg-inosoft-blue text-white px-3 py-1 rounded-full text-sm">Flutter</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow fade-in">
+                    <div class="flex items-center mb-6">
+                        <div class="text-4xl mr-4">⚡</div>
+                        <h3 class="font-heading text-2xl font-semibold text-gray-900">Microsoft D365 CRM & Power Apps</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Transform your business processes with Microsoft's enterprise solutions. Custom implementations and integrations.</p>
+                    <div class="text-sm text-gray-500 mb-4">Example: CRM system for 500+ sales team</div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-inosoft-blue text-white px-3 py-1 rounded-full text-sm">D365</span>
+                        <span class="bg-inosoft-blue text-white px-3 py-1 rounded-full text-sm">Power Apps</span>
+                        <span class="bg-inosoft-blue text-white px-3 py-1 rounded-full text-sm">Power BI</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow fade-in">
+                    <div class="flex items-center mb-6">
+                        <div class="text-4xl mr-4">🚀</div>
+                        <h3 class="font-heading text-2xl font-semibold text-gray-900">IT Offshore Services</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Dedicated development teams that seamlessly integrate with your organization. Scale your development capacity efficiently.</p>
+                    <div class="text-sm text-gray-500 mb-4">Example: 10-person dedicated team for fintech startup</div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-inosoft-blue text-white px-3 py-1 rounded-full text-sm">Team Extension</span>
+                        <span class="bg-inosoft-blue text-white px-3 py-1 rounded-full text-sm">Project-based</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow fade-in">
+                    <div class="flex items-center mb-6">
+                        <div class="text-4xl mr-4">🛠️</div>
+                        <h3 class="font-heading text-2xl font-semibold text-gray-900">Maintenance & Support</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Keep your systems running smoothly with our comprehensive maintenance and support services. 24/7 monitoring available.</p>
+                    <div class="text-sm text-gray-500 mb-4">Example: 99.9% uptime for banking application</div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-inosoft-blue text-white px-3 py-1 rounded-full text-sm">24/7 Support</span>
+                        <span class="bg-inosoft-blue text-white px-3 py-1 rounded-full text-sm">Performance</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow col-span-1 md:col-span-2 fade-in">
+                    <div class="flex items-center mb-6">
+                        <div class="text-4xl mr-4">💡</div>
+                        <h3 class="font-heading text-2xl font-semibold text-gray-900">IT Consulting</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Strategic technology guidance to help you make informed decisions. Architecture reviews, technology selection, and digital transformation roadmaps.</p>
+                    <div class="text-sm text-gray-500 mb-4">Example: Digital transformation strategy for manufacturing company</div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-inosoft-blue text-white px-3 py-1 rounded-full text-sm">Architecture</span>
+                        <span class="bg-inosoft-blue text-white px-3 py-1 rounded-full text-sm">Strategy</span>
+                        <span class="bg-inosoft-blue text-white px-3 py-1 rounded-full text-sm">Cloud Migration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Tech Stack</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We work with cutting-edge technologies to deliver robust, scalable solutions</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 fade-in">
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">⚡</div>
+                    <div class="text-sm font-medium">.NET</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">🟢</div>
+                    <div class="text-sm font-medium">NodeJS</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">🐹</div>
+                    <div class="text-sm font-medium">GoLang</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">🐘</div>
+                    <div class="text-sm font-medium">PHP</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">💚</div>
+                    <div class="text-sm font-medium">Vue</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">⚛️</div>
+                    <div class="text-sm font-medium">ReactJS</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">🐍</div>
+                    <div class="text-sm font-medium">Python</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">📊</div>
+                    <div class="text-sm font-medium">R</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">🐳</div>
+                    <div class="text-sm font-medium">Docker</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">☸️</div>
+                    <div class="text-sm font-medium">Kubernetes</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">☁️</div>
+                    <div class="text-sm font-medium">AWS</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">🌐</div>
+                    <div class="text-sm font-medium">GCP</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">🔷</div>
+                    <div class="text-sm font-medium">Alicloud</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">🔵</div>
+                    <div class="text-sm font-medium">IBM</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">🚀</div>
+                    <div class="text-sm font-medium">Kafka</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">📈</div>
+                    <div class="text-sm font-medium">Tableau</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">🧠</div>
+                    <div class="text-sm font-medium">TensorFlow</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">💼</div>
+                    <div class="text-sm font-medium">D365 CRM</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">⚡</div>
+                    <div class="text-sm font-medium">Power Apps</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">🤖</div>
+                    <div class="text-sm font-medium">Android</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">📱</div>
+                    <div class="text-sm font-medium">iOS</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div class="text-3xl mb-2">🦋</div>
+                    <div class="text-sm font-medium">Flutter</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Showcasing our successful partnerships and innovative solutions</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow fade-in">
+                    <div class="h-48 bg-gradient-to-br from-inosoft-dark-blue to-inosoft-blue flex items-center justify-center">
+                        <div class="text-white text-6xl">🏦</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-semibold mb-2 text-gray-900">Banking Platform</h3>
+                        <p class="text-gray-600 mb-4">Secure digital banking solution serving 50K+ customers with 99.9% uptime</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">.NET</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">React</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">AWS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow fade-in">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
+                        <div class="text-white text-6xl">🛒</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-semibold mb-2 text-gray-900">E-commerce Platform</h3>
+                        <p class="text-gray-600 mb-4">Multi-vendor marketplace handling 100K+ daily transactions</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">Node.js</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">Vue</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">GCP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow fade-in">
+                    <div class="h-48 bg-gradient-to-br from-inosoft-dark-blue to-purple-600 flex items-center justify-center">
+                        <div class="text-white text-6xl">🏭</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-semibold mb-2 text-gray-900">Manufacturing ERP</h3>
+                        <p class="text-gray-600 mb-4">Complete ERP solution streamlining operations for 500+ employees</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">D365</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">Power Apps</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm">Azure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">Join Our Team</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Be part of Indonesia's leading software development company</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+                <div class="fade-in">
+                    <h3 class="font-heading text-2xl font-bold text-gray-900 mb-6">Why Work at Inosoft?</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-inosoft-blue rounded-full flex items-center justify-center mr-4 mt-1">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Global Projects, Local Culture</h4>
+                                <p class="text-gray-600">Work on international projects while staying rooted in Indonesian values</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-inosoft-blue rounded-full flex items-center justify-center mr-4 mt-1">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Continuous Learning</h4>
+                                <p class="text-gray-600">Access to latest technologies and professional development opportunities</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-inosoft-blue rounded-full flex items-center justify-center mr-4 mt-1">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Work-Life Balance</h4>
+                                <p class="text-gray-600">Flexible working arrangements and comprehensive benefits</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <div class="bg-gradient-to-br from-inosoft-dark-blue to-inosoft-blue p-8 rounded-2xl text-white">
+                        <h3 class="font-heading text-2xl font-bold mb-6">Current Openings</h3>
+                        <div class="space-y-4">
+                            <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-2">Senior Full Stack Developer</h4>
+                                <p class="text-sm opacity-90">React, Node.js, 5+ years experience</p>
+                            </div>
+                            <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-2">Microsoft D365 Consultant</h4>
+                                <p class="text-sm opacity-90">D365 CRM, Power Platform, 3+ years</p>
+                            </div>
+                            <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                                <h4 class="font-semibold mb-2">DevOps Engineer</h4>
+                                <p class="text-sm opacity-90">AWS, Docker, Kubernetes, CI/CD</p>
+                            </div>
+                        </div>
+                        <button class="w-full bg-white hover:bg-gray-100 text-inosoft-blue font-semibold py-3 px-6 rounded-lg mt-6 transition-colors">
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Photo Placeholder -->
+            <div class="text-center fade-in">
+                <div class="bg-gradient-to-r from-gray-100 to-gray-200 h-64 rounded-2xl flex items-center justify-center mb-8">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">👥</div>
+                        <p class="text-gray-600 text-lg">Our Amazing Team in Surabaya</p>
+                    </div>
+                </div>
+                <blockquote class="text-xl text-gray-600 italic max-w-3xl mx-auto">
+                    "Working at Inosoft has been an incredible journey. The company truly values innovation and personal growth, 
+                    while maintaining the warmth of Indonesian hospitality."
+                </blockquote>
+                <p class="text-gray-500 mt-4">- Sarah, Senior Developer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Ready to scale your ambitions? Let's discuss your project</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="fade-in">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-inosoft-blue focus:border-transparent" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-inosoft-blue focus:border-transparent" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company</label>
+                            <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-inosoft-blue focus:border-transparent" placeholder="Your Company">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-inosoft-blue focus:border-transparent" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-inosoft-blue hover:bg-inosoft-light-blue text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                            Send Message
+                        </button>
+                        <p class="text-sm text-gray-500 text-center">This is a demo form. In a real implementation, this would connect to a backend service.</p>
+                    </form>
+                </div>
+                
+                <div class="fade-in">
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="font-heading text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="w-6 h-6 text-inosoft-blue mr-4 mt-1">📍</div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">Address</h4>
+                                        <p class="text-gray-600">Pandugo II P-1<br>Surabaya, Indonesia</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-6 h-6 text-inosoft-blue mr-4 mt-1">📞</div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">Phone</h4>
+                                        <p class="text-gray-600">+62 31 8700688</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-6 h-6 text-inosoft-blue mr-4 mt-1">✉️</div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">Email</h4>
+                                        <p class="text-gray-600">info@inosoftweb.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Map Placeholder -->
+                        <div class="bg-gradient-to-br from-gray-200 to-gray-300 h-64 rounded-lg flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🗺️</div>
+                                <p class="text-gray-600">Interactive Map</p>
+                                <p class="text-sm text-gray-500">Surabaya, Indonesia</p>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-inosoft-blue text-white rounded-full flex items-center justify-center hover:bg-inosoft-light-blue transition-colors">
+                                    <span class="text-sm">Li</span>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-inosoft-blue text-white rounded-full flex items-center justify-center hover:bg-inosoft-light-blue transition-colors">
+                                    <span class="text-sm">Tw</span>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-inosoft-blue text-white rounded-full flex items-center justify-center hover:bg-inosoft-light-blue transition-colors">
+                                    <span class="text-sm">Fb</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-inosoft-dark-blue text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-heading font-bold mb-4">
+                        <span class="text-inosoft-accent">I</span>nosoft
+                    </div>
+                    <p class="text-gray-400 mb-4">Software that scales with your ambition. Proudly serving from Surabaya since 2006.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Twitter</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Facebook</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#services" class="hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Mobile Apps</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Microsoft D365</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">IT Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#careers" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <div class="text-gray-400 space-y-2">
+                        <p>Pandugo II P-1<br>Surabaya, Indonesia</p>
+                        <p>+62 31 8700688</p>
+                        <p>info@inosoftweb.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Inosoft. All rights reserved. Built with pride in Indonesia 🇮🇩</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-inosoft-blue', 'font-semibold');
+                link.classList.add('text-gray-700');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.remove('text-gray-700');
+                    link.classList.add('text-inosoft-blue', 'font-semibold');
+                }
+            });
+        });
+
+        // Form submission (demo)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! This is a demo form. In a real implementation, this would send your message to our team.');
+        });
+
+        // Initialize fade-in animations for elements already in view
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsInView = document.querySelectorAll('.fade-in');
+            elementsInView.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.classList.add('visible');
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96ff928c24f8ea7f',t:'MTc1NTMzMzA1NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
