@@ -63,3 +63,8 @@ nav.scrolled .nav-link {
 nav.scrolled .nav-link:hover {
   @apply text-primary;
 }
+
+/* Logo auto color (no JS) */
+.nav-logo img {
+  mix-blend-mode: difference;
+}
