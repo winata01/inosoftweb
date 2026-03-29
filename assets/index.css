@@ -64,7 +64,20 @@ nav.scrolled .nav-link:hover {
   @apply text-primary;
 }
 
-/* Logo auto color (no JS) */
-.nav-logo img {
-  mix-blend-mode: difference;
+.logo-white {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.logo-color {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#mainNav.scrolled .logo-color {
+  opacity: 1;
+}
+
+#mainNav.scrolled .logo-white {
+  opacity: 0;
 }
