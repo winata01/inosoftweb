@@ -64,16 +64,6 @@ nav.scrolled .nav-link:hover {
   @apply text-primary;
 }
 
-.logo-white {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.logo-color {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
 #mainNav.scrolled .logo-color {
   opacity: 1;
 }
