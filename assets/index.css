@@ -47,6 +47,16 @@
   background: linear-gradient(135deg, #006a6a, #00b5b5);
 }
 
+/* Active nav link */
+.nav-link.active {
+  @apply text-white font-semibold relative;
+}
+
+nav.bg-white .nav-link.active,
+nav.scrolled .nav-link.active {
+  @apply text-primary font-semibold;
+}
+
 /* Navigation Scroll Styles */
 nav.scrolled {
   @apply bg-white shadow-md py-3 border-b-0;

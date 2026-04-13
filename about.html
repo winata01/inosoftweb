@@ -17,7 +17,7 @@
         
           <div class="hidden md:flex items-center space-x-8 text-on-surface/70 text-sm font-medium transition-colors duration-300">
           <a href="index.html" class="nav-link hover:text-primary transition-colors">Home</a>
-          <a href="about.html" class="nav-link text-primary transition-colors">About Us</a>
+          <a href="about.html" class="nav-link hover:text-primary transition-colors">About Us</a>
           <a href="services.html" class="nav-link hover:text-primary transition-colors">Services</a>
           <a href="#" class="nav-link hover:text-primary transition-colors">Career</a>
           <a href="#contact" class="nav-link hover:text-primary transition-colors">Contact</a>
@@ -309,6 +309,17 @@
 
     <script>
       lucide.createIcons();
+
+      // Active nav link detection
+      (function () {
+        const filename = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.nav-link').forEach(link => {
+          const href = link.getAttribute('href');
+          if (href && !href.startsWith('#') && href === filename) {
+            link.classList.add('active');
+          }
+        });
+      })();
     </script>
   </body>
 </html>

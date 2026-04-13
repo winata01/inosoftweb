@@ -12,7 +12,7 @@
     <nav id="mainNav" class="fixed top-0 w-full z-50 bg-transparent py-5 px-6 transition-all duration-300">
       <div class="max-w-7xl mx-auto flex items-center justify-between">
           <div class="nav-logo relative h-8">
-            <img src="assets/logo_white.png" alt="Inosoft" class="top-0 left-0 h-8 logo-white opacity-1 transition-opacity duration-300          ">
+            <img src="assets/logo_white.png" alt="Inosoft" class="top-0 left-0 h-8 logo-white opacity-100 transition-opacity duration-300          ">
             <img src="assets/logo_color.png" alt="Inosoft" class="absolute top-0 left-0 h-8 opacity-0 logo-color transition-opacity duration-300">
           </div>
           <div class="hidden md:flex items-center space-x-8 text-white/80 text-sm font-medium transition-colors duration-300">
@@ -31,10 +31,11 @@
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden hero-gradient">
       <!-- Honeycomb SVG Pattern -->
-      <div class="absolute bottom-0 left-0 w-full h-1/2 pointer-events-none opacity-40 z-0 overflow-hidden">
-        <img src="assets/hero-pattern.svg" class="w-full h-full object-cover object-bottom" alt="" aria-hidden="true" />
+      <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none">
+        <img src="assets/hero-pattern.svg" class="w-full block opacity-100" alt="" aria-hidden="true" />
       </div>
 
+      
       <div class="relative z-10 max-w-7xl mx-auto px-6 text-center md:text-left w-full">
         <div class="animate-fade-in-up">
           <br><br>
@@ -254,6 +255,17 @@
           nav.classList.remove('scrolled');
         }
       });
+
+      // Active nav link detection
+      (function () {
+        const filename = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.nav-link').forEach(link => {
+          const href = link.getAttribute('href');
+          if (href && !href.startsWith('#') && href === filename) {
+            link.classList.add('active');
+          }
+        });
+      })();
 
       // Testimonial Logic
       const testimonials = [
