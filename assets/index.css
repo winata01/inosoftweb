@@ -47,6 +47,7 @@
   background: linear-gradient(135deg, #006a6a, #00b5b5);
 }
 
+
 /* Active nav link */
 .nav-link.active {
   @apply text-white font-semibold relative;

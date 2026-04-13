@@ -30,10 +30,66 @@
 
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden hero-gradient">
-      <!-- Honeycomb SVG Pattern -->
-      <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none">
-        <img src="assets/hero-pattern.svg" class="w-full block opacity-100" alt="" aria-hidden="true" />
-      </div>
+      <!-- Rounded hexagon outlines (upper-right, partially cropped) -->
+      <svg
+        class="absolute inset-0 w-full h-full z-[1] pointer-events-none"
+        viewBox="0 0 1440 900"
+        preserveAspectRatio="xMidYMin slice"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <defs>
+          <!-- Hexagon shape extracted from design/hexagon website Inosoft.svg, normalized to origin -->
+          <path id="rhex"
+            d="M 237.851,11.093 C 257.065,0 280.737,0 299.951,11.093
+               C 351.701,40.971 455.002,100.611 506.752,130.489
+               C 525.966,141.582 537.802,162.083 537.802,184.269
+               L 537.802,423.063
+               C 537.802,445.249 525.966,465.750 506.752,476.843
+               C 455.002,506.721 351.701,566.361 299.951,596.239
+               C 280.737,607.332 257.065,607.332 237.851,596.239
+               C 186.101,566.361 82.800,506.721 31.050,476.843
+               C 11.836,465.750 0,445.249 0,423.063
+               L 0,184.269
+               C 0,162.083 11.836,141.582 31.050,130.489
+               C 82.800,100.611 186.101,40.971 237.851,11.093 Z"
+            fill="none"
+            vector-effect="non-scaling-stroke"
+          />
+        </defs>
+        <!-- Left hex: cropped on left edge, upper area -->
+        <use href="#rhex" transform="translate(200,-280) scale(1.0)"
+          stroke="rgba(255,255,255,0.12)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+        <!-- Center hex: mostly visible, upper-center-right -->
+        <use href="#rhex" transform="translate(450,-30) scale(1.0)"
+          stroke="rgba(255,255,255,0.12)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+        <!-- Lower-right hex: cropped bottom and right -->
+        <use href="#rhex" transform="translate(700,380) scale(0.85)"
+          stroke="rgba(255,255,255,0.10)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+      </svg>
+
+      <!-- Hex dot pattern: generated via JS, responsive, pointy-top hexagons growing from sub-pixel at top to large at bottom -->
+      <svg
+        class="absolute inset-0 w-full h-full z-[2] pointer-events-none"
+        id="hexDotPattern"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        style="overflow:hidden;"
+      >
+        <defs>
+          <!-- Fade mask: transparent at middle, fully opaque at very bottom -->
+          <linearGradient id="hexDotFade" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="50%" stop-color="white" stop-opacity="0"/>
+            <stop offset="80%" stop-color="white" stop-opacity="0.1"/>
+            <stop offset="100%" stop-color="white" stop-opacity="1"/>
+          </linearGradient>
+          <mask id="hexDotMask">
+            <rect width="100%" height="100%" fill="url(#hexDotFade)"/>
+          </mask>
+        </defs>
+        <!-- All hex dots go into one compound path for efficiency -->
+        <path id="hexDots" mask="url(#hexDotMask)" fill="white" fill-opacity="1" d=""/>
+      </svg>
 
       
       <div class="relative z-10 max-w-7xl mx-auto px-6 text-center md:text-left w-full">
@@ -326,6 +382,81 @@
         currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1;
         updateTestimonial(currentIndex);
       });
+
+      // ── Hex Dot Pattern ─────────────────────────────────────────────────────
+      // Generates a staggered honeycomb grid of pointy-top hexagons.
+      // Dots grow from sub-pixel at top to full size at bottom (perspective effect).
+      // Per-dot size variation via a deterministic pseudo-random function for an
+      // organic look matching the design in design/inosoft web pattern.txt.
+      (function () {
+        const svgEl  = document.getElementById('hexDotPattern');
+        const dotEl  = document.getElementById('hexDots');
+
+        // Build a single compound SVG path string for all visible dots.
+        function buildHexDots() {
+          const W = svgEl.clientWidth  || window.innerWidth;
+          const H = svgEl.clientHeight || window.innerHeight;
+          if (!W || !H) return;
+
+          // Grid geometry (matches the design's proportions)
+          const spacing  = 20;              // px between hex centers horizontally
+          const rowH     = spacing * 0.866; // vertical row spacing  ≈ 17.32 px
+          const maxR     = spacing * 0.43;  // max circumradius at bottom ≈ 8.6 px
+
+          // Fade window: dots grow from 0 at fadeTop to maxR at fadeBottom (0–1 of H)
+          const fadeTop    = 0.65; // above this fraction dots are sub-pixel / invisible
+          const fadeBottom = 1.00; // at the very bottom dots reach maxR
+
+          // Build compound path
+          const parts    = [];
+          const numRows  = Math.ceil(H / rowH) + 2;
+          const numCols  = Math.ceil(W / spacing) + 2;
+
+          for (let row = 0; row < numRows; row++) {
+            const cy    = H - (numRows - 1 - row) * rowH;
+            const yFrac = cy / H;
+
+            // Linear size growth from fadeTop → fadeBottom
+            const progress = (yFrac - fadeTop) / (fadeBottom - fadeTop);
+            const baseR    = Math.max(0, progress) * maxR;
+            if (baseR < 0.8) continue; // skip sub-pixel dots
+
+            const xOff = (row % 2 === 1) ? spacing * 0.5 : 0; // stagger alternating rows
+
+            for (let col = -1; col < numCols; col++) {
+              const cx = col * spacing + xOff;
+
+              // Deterministic pseudo-random per-dot size variation (±15%)
+              const s  = Math.sin(col * 127.1 + row * 311.7) * 43758.5453;
+              const rnd = s - Math.floor(s); // 0–1
+              const r   = baseR * (0.85 + rnd * 0.30);
+
+              // Pointy-top hexagon path (circumradius r, centred on cx,cy)
+              const w = r * 0.866; // half-width = r·sin(60°)
+              const h = r;         // half-height = r
+              parts.push(
+                `M${cx},${(cy + h).toFixed(2)}` +
+                `L${(cx - w).toFixed(2)},${(cy + h * 0.5).toFixed(2)}` +
+                `L${(cx - w).toFixed(2)},${(cy - h * 0.5).toFixed(2)}` +
+                `L${cx},${(cy - h).toFixed(2)}` +
+                `L${(cx + w).toFixed(2)},${(cy - h * 0.5).toFixed(2)}` +
+                `L${(cx + w).toFixed(2)},${(cy + h * 0.5).toFixed(2)}Z`
+              );
+            }
+          }
+
+          dotEl.setAttribute('d', parts.join(' '));
+        }
+
+        // Build on DOMContentLoaded and on resize (debounced)
+        buildHexDots();
+        let _resizeTimer;
+        window.addEventListener('resize', () => {
+          clearTimeout(_resizeTimer);
+          _resizeTimer = setTimeout(buildHexDots, 150);
+        });
+      })();
+      // ────────────────────────────────────────────────────────────────────────
     </script>
   </body>
 </html>

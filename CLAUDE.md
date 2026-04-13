@@ -36,6 +36,9 @@ This is a **multi-page static site** built with Vite + Tailwind CSS v4. There is
 - `logo_white.png` / `logo_color.png` — nav logos swapped on scroll (white → color)
 - `hero-pattern.svg` — honeycomb decorative SVG in hero section
 
+**Design** (`design/`):
+- Refer to this folder to see the UI design to recreate
+
 **Deploy base path** — `base: '/inosoftweb/'` in `vite.config.ts` (targets GitHub Pages at `/inosoftweb/`).
 
 **Dependencies of note**:
@@ -48,6 +51,27 @@ This is a **multi-page static site** built with Vite + Tailwind CSS v4. There is
 - Do not introduce React, Vue, or any JS framework — pages must remain plain HTML with inline scripts.
 - Do not modify `vite.config.ts` without asking first.
 - Do not add new npm dependencies without asking first.
+
+## Security Requirements
+
+All code must follow OWASP Top 10 mitigations:
+- Always use parameterized queries / Eloquent ORM, never raw SQL with user input
+- Validate and sanitize all user inputs server-side
+- Use Laravel's CSRF protection on all forms (never disable VerifyCsrfToken)
+- Escape all output in Blade templates (use {{ }} not {!! !!} unless explicitly safe)
+- Enforce authentication middleware on protected routes
+- Never expose .env values in responses or logs
+- Use Laravel's built-in hashing for passwords (bcrypt via Hash::make)
+- Sanitize file uploads — validate MIME type, size, and store outside public/
+- Set proper HTTP security headers (X-Frame-Options, CSP, X-Content-Type-Options)
+
+When adding new features, flag any potential security concerns before implementing.
+
+## Code Review Checklist
+Before finishing any feature, verify:
+- No sensitive data in logs
+- All routes have appropriate middleware
+- No hardcoded credentials
 
 ## Workflow
 
