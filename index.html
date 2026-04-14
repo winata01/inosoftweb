@@ -11,10 +11,10 @@
     <!-- Navigation -->
     <nav id="mainNav" class="fixed top-0 w-full z-50 bg-transparent py-5 px-6 transition-all duration-300">
       <div class="max-w-7xl mx-auto flex items-center justify-between">
-          <div class="nav-logo relative h-8">
+          <a href="index.html" class="nav-logo relative h-8 block">
             <img src="assets/logo_white.png" alt="Inosoft" class="top-0 left-0 h-8 logo-white opacity-100 transition-opacity duration-300          ">
             <img src="assets/logo_color.png" alt="Inosoft" class="absolute top-0 left-0 h-8 opacity-0 logo-color transition-opacity duration-300">
-          </div>
+          </a>
           <div class="hidden md:flex items-center space-x-8 text-white/80 text-sm font-medium transition-colors duration-300">
           <a href="index.html" class="nav-link hover:text-white transition-colors">Home</a>
           <a href="about.html" class="nav-link hover:text-white transition-colors">About Us</a>
@@ -387,10 +387,7 @@
             for (let col = -1; col < numCols; col++) {
               const cx = col * spacing + xOff;
 
-              // Deterministic pseudo-random per-dot size variation (±15%)
-              const s  = Math.sin(col * 127.1 + row * 311.7) * 43758.5453;
-              const rnd = s - Math.floor(s); // 0–1
-              const r   = baseR * (0.85 + rnd * 0.30);
+              const r = baseR;
 
               // Pointy-top hexagon path (circumradius r, centred on cx,cy)
               const w = r * 0.866; // half-width = r·sin(60°)
