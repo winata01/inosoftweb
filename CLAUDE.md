@@ -22,7 +22,8 @@ This is a **multi-page static site** built with Vite + Tailwind CSS v4. There is
 **Pages** — each is a separate Vite entry point configured in `vite.config.ts`:
 - `index.html` — home (hero, history, services, impact, testimonials, contact footer)
 - `about.html` — company history timeline, culture values diagram, contact form
-- `services.html` — services detail page
+- `engagement.html` — engagement model page
+- `privacy.html` — privacy policy page
 
 **Styling** — Tailwind CSS v4 via the `@tailwindcss/vite` plugin. The design system is defined entirely in [`assets/index.css`](assets/index.css) using `@theme {}`:
 - Custom colors: `primary`, `primary-container`, `secondary`, `secondary-container`, `surface`, `surface-low`, `surface-lowest`, `on-surface`, `outline-variant`
@@ -34,7 +35,7 @@ This is a **multi-page static site** built with Vite + Tailwind CSS v4. There is
 **Assets** (`assets/`):
 - `index.css` — single shared stylesheet for all pages
 - `logo_white.png` / `logo_color.png` — nav logos swapped on scroll (white → color)
-- `hero-pattern.svg` — honeycomb decorative SVG in hero section
+- `*.jpg` — images used in pages
 
 **Design** (`design/`):
 - Refer to this folder to see the UI design to recreate
@@ -42,7 +43,6 @@ This is a **multi-page static site** built with Vite + Tailwind CSS v4. There is
 **Deploy base path** — `base: '/inosoftweb/'` in `vite.config.ts` (targets GitHub Pages at `/inosoftweb/`).
 
 **Dependencies of note**:
-- `@google/genai` — Gemini AI SDK (API key injected at build time via `process.env.GEMINI_API_KEY`)
 - `motion` — animation library (available but not yet used in pages)
 - `express` + `dotenv` — present as dependencies, likely for a future/separate server component
 
