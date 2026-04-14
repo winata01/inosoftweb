@@ -24,6 +24,7 @@ export default defineConfig(({ mode }) => {
           main: path.resolve(__dirname, 'index.html'),
           about: path.resolve(__dirname, 'about.html'),
           services: path.resolve(__dirname, 'services.html'),
+          privacy: path.resolve(__dirname, 'privacy.html'),
         },
       },
     },

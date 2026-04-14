@@ -22,13 +22,13 @@
           <a href="#" class="nav-link hover:text-white transition-colors">Career</a>
           <a href="#contact" class="nav-link hover:text-white transition-colors">Contact</a>
         </div>
-        <a href="#contact" class="bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity">
+        <a href="#contact" class="nav-cta border border-white/60 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-white/10 transition-colors">
           Get In Touch
         </a>
       </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Section 1: Hero -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden hero-gradient">
       <!-- Rounded hexagon outlines (upper-right, partially cropped) -->
       <svg
@@ -91,207 +91,228 @@
         <path id="hexDots" mask="url(#hexDotMask)" fill="white" fill-opacity="1" d=""/>
       </svg>
 
-      
-      <div class="relative z-10 max-w-7xl mx-auto px-6 text-center md:text-left w-full">
+      <div class="relative z-10 max-w-7xl mx-auto px-6 text-center w-full flex flex-col items-center">
         <div class="animate-fade-in-up">
-          <br><br>
-          <h1 class="text-5xl md:text-8xl font-bold text-white leading-[0.9] tracking-tighter mb-8">
-            We Build.<br />
-            We Care.<br />
-            We Deliver.
+          <h1 class="pt-24 text-4xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-6">
+            Build your development team in Indonesia — without losing control
           </h1>
-          <p class="text-white/70 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
-            Building enterprise solutions with local agility & global standards since 2008. 
-            Proudly serving from Indonesia to the world.
+          <p class="text-white/70 text-lg md:text-xl mb-10 leading-relaxed">
+            We work as an extension of your team, aligned with your tools, standards, and timelines. No layers, no noise!
           </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- History Section -->
-    <section class="py-24 bg-surface">
-      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-        <div class="rounded-3xl overflow-hidden shadow-2xl">
-          <img 
-            src="https://picsum.photos/seed/team/800/600" 
-            alt="Inosoft Team" 
-            class="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-        </div>
-        
-        <div>
-          <span class="text-secondary font-bold text-xs uppercase tracking-widest mb-4 block">The History of Inosoft</span>
-          <h2 class="text-3xl md:text-4xl font-bold text-on-surface mb-6 leading-tight">
-            Inosoft has built trusted solutions since 2008, empowering clients worldwide.
-          </h2>
-          <p class="text-on-surface/60 leading-relaxed mb-8">
-            Inosoft has built trusted solutions since 2008, empowering clients worldwide. 
-            The company started as a small team with big dreams, and today it serves 
-            international clients with high-quality software engineering and digital products.
-          </p>
-          <a href="about.html" class="inline-block bg-primary-container text-white px-8 py-3 rounded-full font-semibold hover:bg-primary transition-colors">
-            More About Us
+          <a href="#contact" class="inline-block bg-primary-container text-white px-8 py-4 rounded-full font-semibold text-base hover:opacity-90 transition-opacity">
+            Get in touch
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="py-24 hero-gradient relative">
+    <!-- Section 2: How we support your business -->
+    <section class="py-12 bg-surface">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-white text-3xl md:text-4xl font-bold">Services</h2>
-        </div>
-        
+        <h2 class="text-3xl md:text-4xl font-bold text-on-surface mb-14">How we support your business</h2>
         <div class="grid md:grid-cols-3 gap-8">
-          <!-- Service 1 -->
-          <div class="glass p-10 rounded-3xl hover:bg-white/10 transition-colors group cursor-pointer">
-            <div class="bg-white/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-              <i data-lucide="code-2" class="w-8 h-8 text-primary-container"></i>
+          <div class="bg-surface-low rounded-3xl p-10 border border-outline-variant/30">
+            <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-8">
+              <i data-lucide="users" class="w-6 h-6 text-primary"></i>
             </div>
-            <h3 class="text-white text-xl font-bold mb-4">Custom Software Development</h3>
-            <p class="text-white/60 leading-relaxed text-sm">
-              Robust and scalable software solutions tailored to your business needs across web and mobile platforms.
-            </p>
+            <h3 class="text-xl font-bold text-on-surface mb-4">Dedicated Team</h3>
+            <p class="text-on-surface/60 leading-relaxed text-sm">Your own developers, working full-time for you. Managed, structured, and aligned with your workflow.</p>
           </div>
-          <!-- Service 2 -->
-          <div class="glass p-10 rounded-3xl hover:bg-white/10 transition-colors group cursor-pointer">
-            <div class="bg-white/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-              <i data-lucide="globe" class="w-8 h-8 text-primary-container"></i>
+          <div class="bg-surface-low rounded-3xl p-10 border border-outline-variant/30">
+            <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-8">
+              <i data-lucide="plug" class="w-6 h-6 text-primary"></i>
             </div>
-            <h3 class="text-white text-xl font-bold mb-4">Web Application Development</h3>
-            <p class="text-white/60 leading-relaxed text-sm">
-              Modern web applications built with the latest technologies to ensure performance and user experience.
-            </p>
+            <h3 class="text-xl font-bold text-on-surface mb-4">Team Extension</h3>
+            <p class="text-on-surface/60 leading-relaxed text-sm">Plug into your existing team and scale quickly without the hiring overhead.</p>
           </div>
-          <!-- Service 3 -->
-          <div class="glass p-10 rounded-3xl hover:bg-white/10 transition-colors group cursor-pointer">
-            <div class="bg-white/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-              <i data-lucide="users" class="w-8 h-8 text-primary-container"></i>
+          <div class="bg-surface-low rounded-3xl p-10 border border-outline-variant/30">
+            <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-8">
+              <i data-lucide="package-check" class="w-6 h-6 text-primary"></i>
             </div>
-            <h3 class="text-white text-xl font-bold mb-4">Team Augmentation</h3>
-            <p class="text-white/60 leading-relaxed text-sm">
-              Scale your development team with our expert engineers who integrate seamlessly into your workflow.
-            </p>
+            <h3 class="text-xl font-bold text-on-surface mb-4">Project Delivery</h3>
+            <p class="text-on-surface/60 leading-relaxed text-sm">Clear scope, clear milestones, and reliable delivery from start to finish.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Impact Section -->
-    <section class="py-24 bg-surface">
+    <!-- Section 3: Why Inosoft -->
+    <section class="py-12 hero-gradient">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-on-surface text-3xl md:text-4xl font-bold">Impact</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-14">Why businesses choose Inosoft</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="glass rounded-3xl p-8">
+            <h3 class="text-white font-semibold text-lg mb-3">Works like your internal team</h3>
+            <p class="text-white/60 leading-relaxed text-sm">We integrate into your workflow, tools, and communication style.</p>
+          </div>
+          <div class="glass rounded-3xl p-8">
+            <h3 class="text-white font-semibold text-lg mb-3">Built for real operations</h3>
+            <p class="text-white/60 leading-relaxed text-sm">Experience with inventory, planning, and internal business systems.</p>
+          </div>
+          <div class="glass rounded-3xl p-8">
+            <h3 class="text-white font-semibold text-lg mb-3">Clear communication</h3>
+            <p class="text-white/60 leading-relaxed text-sm">Direct access, structured updates, and no unnecessary layers.</p>
+          </div>
+          <div class="glass rounded-3xl p-8">
+            <h3 class="text-white font-semibold text-lg mb-3">Long-term focus</h3>
+            <p class="text-white/60 leading-relaxed text-sm">We build partnerships, not short-term projects.</p>
+          </div>
         </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-          <div>
-            <div class="text-secondary-container text-5xl md:text-6xl font-bold mb-2">18+</div>
-            <div class="text-on-surface/60 font-medium">Years in Experience</div>
+
+        <div class="max-w-7xl mx-auto pt-12 px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-16">A track record you can rely on</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-10">
+            <div>
+              <div class="text-primary-container text-5xl md:text-6xl font-bold mb-3">20+</div>
+              <div class="text-white/90 font-medium">Years in software development</div>
+            </div>
+            <div>
+              <div class="text-primary-container text-5xl md:text-6xl font-bold mb-3">10+</div>
+              <div class="text-white/90 font-medium">Countries served</div>
+            </div>
+            <div>
+              <div class="text-primary-container text-5xl md:text-6xl font-bold mb-3">150+</div>
+              <div class="text-white/90 font-medium">Projects delivered</div>
+            </div>
           </div>
-          <div>
-            <div class="text-secondary-container text-5xl md:text-6xl font-bold mb-2">10+</div>
-            <div class="text-on-surface/60 font-medium">Country Coverages</div>
+          <p class="text-white/50 text-sm">Supporting clients across multiple countries</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 4: Team -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-on-surface mb-16">Team behind Inosoft</h2>
+        <div class="overflow-hidden rounded-2xl shadow-md">
+          <img
+            src="assets/inosoft_team.jpg"
+            alt="Inosoft development team in Indonesia"
+            class="w-full h-auto object-cover"
+            loading="lazy"
+            width="1440"
+            height="582"
+          />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Section 5: How We Work -->
+    <section class="py-12 bg-surface-low">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-on-surface mb-14">How we work with you</h2>
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="flex flex-col gap-4">
+            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm flex-shrink-0">1</div>
+            <h3 class="font-semibold text-on-surface">Understand your workflow</h3>
+            <p class="text-on-surface/60 text-sm leading-relaxed">We start from how your business actually operates</p>
           </div>
-          <div>
-            <div class="text-secondary-container text-5xl md:text-6xl font-bold mb-2">150+</div>
-            <div class="text-on-surface/60 font-medium">Total Projects Finished</div>
+          <div class="flex flex-col gap-4">
+            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm flex-shrink-0">2</div>
+            <h3 class="font-semibold text-on-surface">Align with your team</h3>
+            <p class="text-on-surface/60 text-sm leading-relaxed">Tools, process, and communication — we adapt to you</p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm flex-shrink-0">3</div>
+            <h3 class="font-semibold text-on-surface">Build and iterate</h3>
+            <p class="text-on-surface/60 text-sm leading-relaxed">Deliver in cycles with real feedback</p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm flex-shrink-0">4</div>
+            <h3 class="font-semibold text-on-surface">Support and improve</h3>
+            <p class="text-on-surface/60 text-sm leading-relaxed">We stay with you as your system evolves</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="py-24 bg-surface-low">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-on-surface text-3xl md:text-4xl font-bold">Testimonials</h2>
-        </div>
-        
-        <div class="relative flex items-center justify-center">
-          <button id="prevTestimonial" class="absolute left-0 z-10 p-3 bg-white rounded-full shadow-lg hover:bg-surface transition-colors">
-            <i data-lucide="chevron-left" class="w-6 h-6 text-on-surface"></i>
-          </button>
-          
-          <div class="w-full max-w-4xl overflow-hidden">
-            <div id="testimonialContainer" class="bg-white p-12 rounded-[40px] text-center shadow-sm transition-all duration-500">
-              <img id="testimonialImage" src="https://picsum.photos/seed/person1/100/100" alt="Person" class="w-20 h-20 rounded-full mx-auto mb-8 border-4 border-surface" referrerPolicy="no-referrer">
-              <p id="testimonialText" class="text-xl md:text-2xl italic text-on-surface/80 mb-8 leading-relaxed">
-                "Inosoft has a brilliant development team and always delivers high-quality software solutions."
-              </p>
-              <h4 id="testimonialName" class="text-lg font-bold text-on-surface">Robert George</h4>
-              <p id="testimonialRole" class="text-primary font-medium text-sm">CEO, TechCorp</p>
-            </div>
-          </div>
+    <!-- Section 6: About (Short) -->
+    <section class="py-12 bg-surface">
+      <div class="max-w-7xl mx-auto px-6 max-w-2xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-on-surface mb-8">About Inosoft</h2>
+        <p class="text-on-surface/60 leading-relaxed text-lg mb-4">
+          We are a boutique development partner based in Indonesia, working with clients globally since 2006.
+        </p>
+        <p class="text-on-surface/60 leading-relaxed text-lg mb-10">
+          Our focus is simple — build reliable systems and long-term partnerships.
+        </p>
+        <a href="about.html" class="inline-block border-2 border-primary text-primary px-8 py-3 rounded-full font-semibold hover:bg-primary hover:text-white transition-colors">
+          Learn more
+        </a>
+      </div>
+    </section>
 
-          <button id="nextTestimonial" class="absolute right-0 z-10 p-3 bg-white rounded-full shadow-lg hover:bg-surface transition-colors">
-            <i data-lucide="chevron-right" class="w-6 h-6 text-on-surface"></i>
-          </button>
-        </div>
-        
-        <div id="testimonialDots" class="flex justify-center mt-8 space-x-2">
-          <button class="w-6 h-2 rounded-full bg-primary transition-all"></button>
-          <button class="w-2 h-2 rounded-full bg-on-surface/20 transition-all"></button>
-          <button class="w-2 h-2 rounded-full bg-on-surface/20 transition-all"></button>
-        </div>
+    <!-- Section 7: Final CTA -->
+    <section class="py-12 hero-gradient">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Let's build your team</h2>
+        <p class="text-white/70 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+          Tell us what you need — we'll help you structure the right setup
+        </p>
+        <a href="#contact" class="inline-block bg-white text-primary px-10 py-4 rounded-full font-semibold text-base hover:opacity-90 transition-opacity">
+          Get in touch
+        </a>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-secondary-container text-white py-24">
+    <footer id="contact" class="bg-white text-on-surface py-12 border-t border-outline-variant/30">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid md:grid-cols-4 gap-16 mb-24">
           <div class="md:col-span-2">
-            <h3 class="text-xl font-bold mb-8">Contact Form</h3>
-            <form class="space-y-4">
-              <div class="grid grid-cols-2 gap-4">
-                <input type="text" placeholder="First name" class="bg-white/10 border-none rounded-xl px-6 py-4 w-full focus:ring-2 focus:ring-primary-container outline-none transition-all">
-                <input type="text" placeholder="Last name" class="bg-white/10 border-none rounded-xl px-6 py-4 w-full focus:ring-2 focus:ring-primary-container outline-none transition-all">
+            <h4 class="text-xl font-bold mb-4">PT. Inosoft Trans Sistem</h4>
+
+            <h4 class="text-xs font-bold uppercase tracking-widest text-on-surface/30 mb-2">Address</h4>
+            <p class="text-on-surface/60 text-sm leading-relaxed">
+              Jl. Penjaringan Sari, YKP Pandugo 2<br>
+              Blok P No. 1, Penjaringan Sari, Kec.<br>
+              Rungkut, Surabaya, Jawa Timur 60297
+            </p>
+
+            <br>
+            <div class="flex space-x-12">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-on-surface/30 mb-2">Email</p>
+                <p class="text-on-surface/60 text-sm leading-relaxed">info@inosoftweb.com</p>
               </div>
-              <textarea placeholder="Your message" rows="4" class="bg-white/10 border-none rounded-xl px-6 py-4 w-full focus:ring-2 focus:ring-primary-container outline-none transition-all resize-none"></textarea>
-              <button class="btn-gradient w-full py-4 rounded-xl font-bold flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity">
-                <span>Contact</span>
-                <i data-lucide="arrow-right" class="w-5 h-5"></i>
-              </button>
-            </form>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-on-surface/30 mb-2">Phone</p>
+                <p class="text-on-surface/60 text-sm leading-relaxed">+62-31-8700688</p>
+              </div>
+            </div>
+
           </div>
-          
+
           <div>
-            <h3 class="text-xl font-bold mb-8">Social Media</h3>
+            <h3 class="text-xl font-bold mb-4">Follow us</h3>
             <div class="space-y-4">
-              <a href="#" class="flex items-center space-x-3 text-white/60 hover:text-white transition-colors">
-                <i data-lucide="facebook" class="w-5 h-5"></i>
-                <span>Facebook</span>
-              </a>
-              <a href="#" class="flex items-center space-x-3 text-white/60 hover:text-white transition-colors">
-                <i data-lucide="instagram" class="w-5 h-5"></i>
-                <span>Instagram</span>
-              </a>
-              <a href="#" class="flex items-center space-x-3 text-white/60 hover:text-white transition-colors">
-                <i data-lucide="linkedin" class="w-5 h-5"></i>
+              <a target="_blank" href="https://www.linkedin.com/company/inosoftweb" class="flex items-center space-x-3 text-on-surface/50 hover:text-primary transition-colors">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
                 <span>LinkedIn</span>
               </a>
             </div>
           </div>
 
           <div>
-            <h3 class="text-xl font-bold mb-8">Navigation</h3>
-            <div class="space-y-4 text-white/60">
-              <a href="index.html" class="block hover:text-white transition-colors">Home</a>
-              <a href="about.html" class="block hover:text-white transition-colors">About Us</a>
-              <a href="services.html" class="block hover:text-white transition-colors">Services</a>
-              <a href="#" class="block hover:text-white transition-colors">Career</a>
-              <a href="#contact" class="block hover:text-white transition-colors">Contact</a>
+            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+            <div class="space-y-4 text-on-surface/50">
+              <ul class="list-disc list-inside space-y-1">
+                <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                <li><a href="services.html" class="hover:text-primary transition-colors">Services</a></li>
+                <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+              </ul>
             </div>
           </div>
         </div>
-        
-        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-sm text-white/40">
-          <p>© 2026 INOSOFT. All rights reserved</p>
+
+        <div class="pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center text-sm text-on-surface/40">
+          <p>© 2026 INOSOFT. All rights reserved. </p>
           <div class="flex space-x-8 mt-4 md:mt-0">
-            <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="privacy.html" class="hover:text-primary transition-colors">Privacy Policy</a>
           </div>
         </div>
       </div>
@@ -322,66 +343,6 @@
           }
         });
       })();
-
-      // Testimonial Logic
-      const testimonials = [
-        {
-          name: "Robert George",
-          role: "CEO, TechCorp",
-          text: "Inosoft has a brilliant development team and always delivers high-quality software solutions.",
-          image: "https://picsum.photos/seed/person1/100/100"
-        },
-        {
-          name: "Aetim Edin",
-          role: "CTO, Global Systems",
-          text: "Inosoft has built trusted solutions for us, empowering our clients worldwide with their expertise.",
-          image: "https://picsum.photos/seed/person2/100/100"
-        },
-        {
-          name: "Sarsina Liang",
-          role: "Product Manager, Innovate",
-          text: "Inosoft understands our customers and trusts our vision, delivering green software with quality.",
-          image: "https://picsum.photos/seed/person3/100/100"
-        }
-      ];
-
-      let currentIndex = 0;
-
-      const updateTestimonial = (index) => {
-        const container = document.getElementById('testimonialContainer');
-        container.style.opacity = 0;
-        container.style.transform = 'translateX(20px)';
-
-        setTimeout(() => {
-          document.getElementById('testimonialImage').src = testimonials[index].image;
-          document.getElementById('testimonialText').innerText = `"${testimonials[index].text}"`;
-          document.getElementById('testimonialName').innerText = testimonials[index].name;
-          document.getElementById('testimonialRole').innerText = testimonials[index].role;
-          
-          // Update dots
-          const dots = document.getElementById('testimonialDots').children;
-          for (let i = 0; i < dots.length; i++) {
-            if (i === index) {
-              dots[i].className = 'w-6 h-2 rounded-full bg-primary transition-all';
-            } else {
-              dots[i].className = 'w-2 h-2 rounded-full bg-on-surface/20 transition-all';
-            }
-          }
-
-          container.style.opacity = 1;
-          container.style.transform = 'translateX(0)';
-        }, 300);
-      };
-
-      document.getElementById('prevTestimonial').addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? testimonials.length - 1 : currentIndex - 1;
-        updateTestimonial(currentIndex);
-      });
-
-      document.getElementById('nextTestimonial').addEventListener('click', () => {
-        currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1;
-        updateTestimonial(currentIndex);
-      });
 
       // ── Hex Dot Pattern ─────────────────────────────────────────────────────
       // Generates a staggered honeycomb grid of pointy-top hexagons.
