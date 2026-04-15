@@ -21,7 +21,7 @@
           <a href="engagement.html" class="nav-link hover:text-primary transition-colors">Engagement Model</a>
         </div>
         <div class="flex items-center gap-3">
-          <a href="index.html#contact" class="hidden md:inline-flex nav-cta border border-primary/60 text-primary px-6 py-2 rounded-full text-sm font-semibold hover:bg-primary/10 transition-colors">
+          <a href="mailto:info@inosoftweb.com?subject=Offshore%20Engineering%20Inquiry" class="hidden md:inline-flex nav-cta border border-primary/60 text-primary px-6 py-2 rounded-full text-sm font-semibold hover:bg-primary/10 transition-colors">
             Get In Touch
           </a>
           <button id="mobileMenuBtn" class="md:hidden nav-hamburger p-1" aria-label="Toggle menu">
@@ -35,7 +35,7 @@
           <a href="index.html" class="nav-link py-3 text-on-surface/70 text-sm font-medium hover:text-primary transition-colors border-b border-gray-100">Home</a>
           <a href="about.html" class="nav-link py-3 text-on-surface/70 text-sm font-medium hover:text-primary transition-colors border-b border-gray-100">About Us</a>
           <a href="engagement.html" class="nav-link py-3 text-on-surface/70 text-sm font-medium hover:text-primary transition-colors">Engagement Model</a>
-          <a href="index.html#contact" class="mt-4 bg-primary text-white px-6 py-3 rounded-full text-sm font-semibold text-center hover:opacity-90 transition-opacity">Get In Touch</a>
+          <a href="mailto:info@inosoftweb.com?subject=Offshore%20Engineering%20Inquiry" class="mt-4 bg-primary text-white px-6 py-3 rounded-full text-sm font-semibold text-center hover:opacity-90 transition-opacity">Get In Touch</a>
         </div>
       </div>
     </nav>
@@ -44,7 +44,7 @@
     <section class="pt-32 pb-16 bg-surface">
       <div class="max-w-4xl mx-auto px-6">
         <h1 class="text-4xl font-bold text-on-surface mb-2">Privacy Policy</h1>
-        <p class="text-on-surface/50 text-sm">Last updated: April 14, 2026</p>
+        <p class="text-on-surface/50 text-sm">Last updated: April 15, 2026</p>
       </div>
     </section>
 
@@ -144,7 +144,7 @@
             <p class="font-semibold text-on-surface">PT. Inosoft Trans Sistem</p>
             <p>Jl. Penjaringan Sari, YKP Pandugo 2, Blok P No. 1</p>
             <p>Penjaringan Sari, Kec. Rungkut, Surabaya, Jawa Timur 60297</p>
-            <p class="pt-2">Email: info@inosoftweb.com</p>
+            <p class="pt-2">Email: <a href="mailto:info@inosoftweb.com?subject=Offshore%20Engineering%20Inquiry" class="hover:underline">info@inosoftweb.com</a></p>
             <p>Phone: +62-31-8700688</p>
           </div>
         </div>
@@ -170,7 +170,7 @@
             <div class="flex space-x-12">
               <div>
                 <p class="text-xs font-bold uppercase tracking-widest text-on-surface/30 mb-2">Email</p>
-                <p class="text-on-surface/60 text-sm leading-relaxed">info@inosoftweb.com</p>
+                <a href="mailto:info@inosoftweb.com?subject=Offshore%20Engineering%20Inquiry" class="text-on-surface/60 text-sm leading-relaxed hover:text-primary transition-colors">info@inosoftweb.com</a>
               </div>
               <div>
                 <p class="text-xs font-bold uppercase tracking-widest text-on-surface/30 mb-2">Phone</p>
@@ -205,7 +205,7 @@
         </div>
 
         <div class="pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center text-sm text-on-surface/40">
-          <p>© 2026 INOSOFT. All rights reserved. </p>
+          <p>© 2026 INOSOFT. All rights reserved.</p>
           <div class="flex space-x-8 mt-4 md:mt-0">
             <a href="privacy.html" class="hover:text-primary transition-colors">Privacy Policy</a>
           </div>
@@ -223,15 +223,7 @@
         mobileMenu.classList.toggle('hidden');
       });
 
-      // Nav is always in scrolled state on this page (no hero behind it)
-      const nav = document.getElementById('mainNav');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-          nav.classList.add('scrolled');
-        } else {
-          nav.classList.remove('scrolled');
-        }
-      });
+      // Nav is always in scrolled state on this page (scrolled class hardcoded in HTML)
     </script>
   </body>
 </html>
