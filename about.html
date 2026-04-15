@@ -16,15 +16,27 @@
         </a>
         
           <div class="hidden md:flex items-center space-x-8 text-on-surface/70 text-sm font-medium transition-colors duration-300">
-          <a href="index.html" class="nav-link hover:text-primary transition-colors">Home</a>
-          <a href="about.html" class="nav-link hover:text-primary transition-colors">About Us</a>
-          <a href="engagement.html" class="nav-link hover:text-primary transition-colors">Engagement Model</a>
-          <a href="#" class="nav-link hover:text-primary transition-colors">Career</a>
-          <a href="#contact" class="nav-link hover:text-primary transition-colors">Contact</a>
+            <a href="index.html" class="nav-link hover:text-primary transition-colors">Home</a>
+            <a href="about.html" class="nav-link hover:text-primary transition-colors">About Us</a>
+            <a href="engagement.html" class="nav-link hover:text-primary transition-colors">Engagement Model</a>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href="#contact" class="hidden md:inline-flex bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity">
+              Get In Touch
+            </a>
+            <button id="mobileMenuBtn" class="md:hidden nav-hamburger p-1" aria-label="Toggle menu">
+              <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+          </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden -mx-6 mt-5 -mb-5 bg-white border-t border-gray-100 shadow-lg md:hidden">
+        <div class="px-6 py-4 flex flex-col">
+          <a href="index.html" class="nav-link py-3 text-on-surface/70 text-sm font-medium hover:text-primary transition-colors border-b border-gray-100">Home</a>
+          <a href="about.html" class="nav-link py-3 text-on-surface/70 text-sm font-medium hover:text-primary transition-colors border-b border-gray-100">About Us</a>
+          <a href="engagement.html" class="nav-link py-3 text-on-surface/70 text-sm font-medium hover:text-primary transition-colors">Engagement Model</a>
+          <a href="#contact" class="mt-4 bg-primary text-white px-6 py-3 rounded-full text-sm font-semibold text-center hover:opacity-90 transition-opacity">Get In Touch</a>
         </div>
-        <a href="#contact" class="bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity">
-          Get In Touch
-        </a>
       </div>
     </nav>
 
@@ -46,7 +58,7 @@
         
         <div class="mt-16 rounded-[40px] overflow-hidden shadow-2xl">
           <img 
-            src="https://picsum.photos/seed/inosoft-team-large/1200/600" 
+            src="assets/team_meeting.jpg" 
             alt="Inosoft Team" 
             class="w-full h-auto object-cover"
             referrerPolicy="no-referrer"
@@ -109,26 +121,56 @@
     <!-- What makes us different section -->
     <section class="py-24 bg-surface-low">
       <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          <!-- Left: Label + Headline + Intro -->
           <div>
             <span class="text-secondary font-bold text-xs uppercase tracking-widest mb-4 block">What makes us different</span>
-              A. Built for Long-Term Engagement
+            <h2 class="text-3xl md:text-4xl font-bold text-on-surface leading-tight">Built different,<br>by design.</h2>
+            <p class="text-on-surface/60 text-sm leading-relaxed mt-4">We don't just add headcount. Our approach is built on long-term thinking, structured delivery, and genuine technical depth — so every engagement is set up to last.</p>
+          </div>
 
-              We design our engagement model for continuity — stable teams, retained knowledge, and minimal turnover impact.
+          <!-- Right: 2×2 card grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
-              B. Process-Driven Delivery
+            <!-- Card A -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-outline-variant/20">
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background: rgba(0,181,181,0.1);">
+                <i data-lucide="link-2" style="width:20px;height:20px;stroke:#00b5b5;stroke-width:1.6;"></i>
+              </div>
+              <h3 class="font-bold text-on-surface text-base mb-2">Long-Term Engagement</h3>
+              <p class="text-on-surface/60 text-sm leading-relaxed">Stable teams, retained knowledge, and minimal turnover impact.</p>
+            </div>
 
-              From planning to release, our workflow ensures visibility, accountability, and predictable outcomes.
+            <!-- Card B -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-outline-variant/20">
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background: rgba(0,181,181,0.1);">
+                <i data-lucide="git-branch" style="width:20px;height:20px;stroke:#00b5b5;stroke-width:1.6;"></i>
+              </div>
+              <h3 class="font-bold text-on-surface text-base mb-2">Process-Driven Delivery</h3>
+              <p class="text-on-surface/60 text-sm leading-relaxed">Visibility, accountability, and predictable outcomes from planning to release.</p>
+            </div>
 
-              C. Technical Depth, Not Just Manpower
+            <!-- Card C -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-outline-variant/20">
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background: rgba(0,181,181,0.1);">
+                <i data-lucide="cpu" style="width:20px;height:20px;stroke:#00b5b5;stroke-width:1.6;"></i>
+              </div>
+              <h3 class="font-bold text-on-surface text-base mb-2">Technical Depth</h3>
+              <p class="text-on-surface/60 text-sm leading-relaxed">Teams selected for problem-solving capability, not just availability.</p>
+            </div>
 
-              Our teams are selected and structured based on problem-solving capability, not just availability.
-
-              D. Communication That Works Across Borders
-
-              Clear communication, aligned expectations, and cultural understanding are core to our delivery.
+            <!-- Card D -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-outline-variant/20">
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background: rgba(0,181,181,0.1);">
+                <i data-lucide="globe" style="width:20px;height:20px;stroke:#00b5b5;stroke-width:1.6;"></i>
+              </div>
+              <h3 class="font-bold text-on-surface text-base mb-2">Communication Across Borders</h3>
+              <p class="text-on-surface/60 text-sm leading-relaxed">Clear communication and cultural understanding core to our delivery.</p>
+            </div>
 
           </div>
-          
+        </div>
       </div>
     </section>
 
@@ -146,8 +188,123 @@
         </div>
 
 
-        <!-- Circular Values Diagram -->
-        <div class="relative mx-auto mb-20 w-full" style="aspect-ratio: 3/2;">
+        <!-- Mobile Values List (hidden on md+) -->
+        <div class="block md:hidden mb-16 space-y-6 max-w-sm mx-auto">
+
+          <!-- Collaboration -->
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl flex-shrink-0 flex items-center justify-center shadow-sm" style="background:rgba(0,181,181,0.08)">
+              <svg viewBox="0 0 40 40" width="32" height="32" fill="none" stroke="#00b5b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="14" cy="11" r="4"/>
+                <path d="M6 28c0-4.4 3.6-8 8-8h1"/>
+                <circle cx="27" cy="11" r="4"/>
+                <path d="M25 20h1c4.4 0 8 3.6 8 8"/>
+                <rect x="15" y="20" width="10" height="8" rx="1.5"/>
+                <line x1="17" y1="23" x2="23" y2="23"/>
+                <line x1="17" y1="25.5" x2="21" y2="25.5"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-on-surface"><span class="text-secondary text-base font-extrabold">C</span>ollaboration</h4>
+              <p class="text-xs text-on-surface/50 leading-relaxed mt-0.5">We work closely as one team, valuing open communication and shared goals to deliver the best outcomes.</p>
+            </div>
+          </div>
+
+          <!-- Agile -->
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl flex-shrink-0 flex items-center justify-center shadow-sm" style="background:rgba(0,181,181,0.08)">
+              <svg viewBox="0 0 40 40" width="32" height="32" fill="none" stroke="#00b5b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="26" cy="10" r="3.5"/>
+                <path d="M23 14l-4 6h8l2 6"/>
+                <circle cx="14" cy="30" r="3"/>
+                <circle cx="29" cy="30" r="3"/>
+                <path d="M17 30h9"/>
+                <path d="M19 20l-2 10"/>
+                <line x1="5"  y1="18" x2="11" y2="18"/>
+                <line x1="4"  y1="22" x2="9"  y2="22"/>
+                <line x1="6"  y1="26" x2="11" y2="26"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-on-surface"><span class="text-secondary text-base font-extrabold">A</span>gile</h4>
+              <p class="text-xs text-on-surface/50 leading-relaxed mt-0.5">We adapt quickly to change, respond efficiently, and continuously improve in a fast-moving environment.</p>
+            </div>
+          </div>
+
+          <!-- Responsibility -->
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl flex-shrink-0 flex items-center justify-center shadow-sm" style="background:rgba(0,181,181,0.08)">
+              <svg viewBox="0 0 40 40" width="32" height="32" fill="none" stroke="#00b5b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="20" cy="9" r="4"/>
+                <path d="M13 28v-6a7 7 0 0 1 14 0v6"/>
+                <path d="M20 17v4"/>
+                <path d="M17 33l3-3 3 3"/>
+                <path d="M24 10 l8 3 c0 8-4 13-8 15 c-4-2-8-7-8-15 z" stroke-opacity="0.7"/>
+                <path d="M27 16 l-3 3-1.5-1.5" stroke-opacity="0.9"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-on-surface"><span class="text-secondary text-base font-extrabold">R</span>esponsibility</h4>
+              <p class="text-xs text-on-surface/50 leading-relaxed mt-0.5">We take ownership of our work, delivering reliable solutions with integrity and accountability.</p>
+            </div>
+          </div>
+
+          <!-- Initiative -->
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl flex-shrink-0 flex items-center justify-center shadow-sm" style="background:rgba(0,181,181,0.08)">
+              <svg viewBox="0 0 40 40" width="32" height="32" fill="none" stroke="#00b5b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="14" cy="9" r="3.5"/>
+                <path d="M11 14 c0 0 1 5 3 7 l4-3 4 4c1-2 2-5 2-8"/>
+                <path d="M14 21 l1 9"/>
+                <path d="M12 30 l3 0 l1 0 l3 0"/>
+                <line x1="30" y1="28" x2="30" y2="10"/>
+                <polyline points="26,15 30,10 34,15"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-on-surface"><span class="text-secondary text-base font-extrabold">I</span>nitiative</h4>
+              <p class="text-xs text-on-surface/50 leading-relaxed mt-0.5">We proactively seek better ways, turning ideas into action to create meaningful impact.</p>
+            </div>
+          </div>
+
+          <!-- Noteworthy -->
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl flex-shrink-0 flex items-center justify-center shadow-sm" style="background:rgba(0,181,181,0.08)">
+              <svg viewBox="0 0 40 40" width="32" height="32" fill="none" stroke="#00b5b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="20" cy="10" r="4"/>
+                <path d="M13 30v-8a7 7 0 0 1 14 0v8"/>
+                <path d="M24 8 l1.5-3 1.7 3.5 3.8.5-2.75 2.7.65 3.8L26 13.7l-3.4 1.8.65-3.8L20.5 9z"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-on-surface"><span class="text-secondary text-base font-extrabold">N</span>oteworthy</h4>
+              <p class="text-xs text-on-surface/50 leading-relaxed mt-0.5">We strive for quality and excellence, ensuring every solution delivers real value.</p>
+            </div>
+          </div>
+
+          <!-- Groundness -->
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl flex-shrink-0 flex items-center justify-center shadow-sm" style="background:rgba(0,181,181,0.08)">
+              <svg viewBox="0 0 40 40" width="32" height="32" fill="none" stroke="#00b5b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="20" cy="8" r="3.5"/>
+                <line x1="20" y1="12" x2="20" y2="34"/>
+                <line x1="20" y1="18" x2="8"  y2="22"/>
+                <line x1="20" y1="18" x2="32" y2="22"/>
+                <path d="M5 22 q3 5 6 0"/>
+                <path d="M29 22 q3 5 6 0"/>
+                <line x1="14" y1="34" x2="26" y2="34"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-on-surface"><span class="text-secondary text-base font-extrabold">G</span>roundness</h4>
+              <p class="text-xs text-on-surface/50 leading-relaxed mt-0.5">We stay humble and grounded, making practical decisions that truly serve people and businesses.</p>
+            </div>
+          </div>
+
+        </div><!-- /mobile list -->
+
+        <!-- Circular Values Diagram (desktop only) -->
+        <div class="hidden md:block relative mx-auto mb-20 w-full" style="aspect-ratio: 3/2;">
 
           <!-- Background SVG: radial connecting lines -->
           <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 640 600" preserveAspectRatio="none" aria-hidden="true">
@@ -343,7 +500,7 @@
           </div>
 
           <div>
-            <h3 class="text-xl font-bold mb-4">Follow us</h3>
+            <h3 class="text-xl font-bold mb-4">Let's connect</h3>
             <div class="space-y-4">
               <a target="_blank" href="https://www.linkedin.com/company/inosoftweb" class="flex items-center space-x-3 text-on-surface/50 hover:text-primary transition-colors">
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -358,9 +515,9 @@
             <h3 class="text-xl font-bold mb-4">Quick Links</h3>
             <div class="space-y-4 text-on-surface/50">
               <ul class="list-disc list-inside space-y-1">
+                <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
                 <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
                 <li><a href="engagement.html" class="hover:text-primary transition-colors">Engagement Model</a></li>
-                <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -377,6 +534,13 @@
 
     <script>
       lucide.createIcons();
+
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
 
       // Active nav link detection
       (function () {

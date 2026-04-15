@@ -18,13 +18,25 @@
         <div class="hidden md:flex items-center space-x-8 text-sm font-medium transition-colors duration-300">
           <a href="index.html" class="nav-link hover:text-primary transition-colors">Home</a>
           <a href="about.html" class="nav-link hover:text-primary transition-colors">About Us</a>
-          <a href="engagement.html" class="nav-link hover:text-white transition-colors">Engagement Model</a>
-          <a href="#" class="nav-link hover:text-primary transition-colors">Career</a>
-          <a href="index.html#contact" class="nav-link hover:text-primary transition-colors">Contact</a>
+          <a href="engagement.html" class="nav-link hover:text-primary transition-colors">Engagement Model</a>
         </div>
-        <a href="index.html#contact" class="nav-cta border border-primary/60 text-primary px-6 py-2 rounded-full text-sm font-semibold hover:bg-primary/10 transition-colors">
-          Get In Touch
-        </a>
+        <div class="flex items-center gap-3">
+          <a href="index.html#contact" class="hidden md:inline-flex nav-cta border border-primary/60 text-primary px-6 py-2 rounded-full text-sm font-semibold hover:bg-primary/10 transition-colors">
+            Get In Touch
+          </a>
+          <button id="mobileMenuBtn" class="md:hidden nav-hamburger p-1" aria-label="Toggle menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden -mx-6 mt-5 -mb-5 bg-white border-t border-gray-100 shadow-lg md:hidden">
+        <div class="px-6 py-4 flex flex-col">
+          <a href="index.html" class="nav-link py-3 text-on-surface/70 text-sm font-medium hover:text-primary transition-colors border-b border-gray-100">Home</a>
+          <a href="about.html" class="nav-link py-3 text-on-surface/70 text-sm font-medium hover:text-primary transition-colors border-b border-gray-100">About Us</a>
+          <a href="engagement.html" class="nav-link py-3 text-on-surface/70 text-sm font-medium hover:text-primary transition-colors">Engagement Model</a>
+          <a href="index.html#contact" class="mt-4 bg-primary text-white px-6 py-3 rounded-full text-sm font-semibold text-center hover:opacity-90 transition-opacity">Get In Touch</a>
+        </div>
       </div>
     </nav>
 
@@ -169,7 +181,7 @@
           </div>
 
           <div>
-            <h3 class="text-xl font-bold mb-4">Follow us</h3>
+            <h3 class="text-xl font-bold mb-4">Let's connect</h3>
             <div class="space-y-4">
               <a target="_blank" href="https://www.linkedin.com/company/inosoftweb" class="flex items-center space-x-3 text-on-surface/50 hover:text-primary transition-colors">
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -184,9 +196,9 @@
             <h3 class="text-xl font-bold mb-4">Quick Links</h3>
             <div class="space-y-4 text-on-surface/50">
               <ul class="list-disc list-inside space-y-1">
+                <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
                 <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
                 <li><a href="engagement.html" class="hover:text-primary transition-colors">Engagement Model</a></li>
-                <li><a href="index.html#contact" class="hover:text-primary transition-colors">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -203,6 +215,13 @@
 
     <script>
       lucide.createIcons();
+
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
 
       // Nav is always in scrolled state on this page (no hero behind it)
       const nav = document.getElementById('mainNav');

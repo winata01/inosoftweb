@@ -58,6 +58,11 @@ nav.scrolled .nav-link.active {
   @apply text-primary font-semibold;
 }
 
+/* Mobile menu active link always uses primary color (white bg) */
+#mobileMenu .nav-link.active {
+  @apply text-primary;
+}
+
 /* Navigation Scroll Styles */
 nav.scrolled {
   @apply bg-white shadow-md py-3 border-b-0;
@@ -85,4 +90,13 @@ nav.scrolled .nav-cta {
 
 #mainNav.scrolled .logo-white {
   opacity: 0;
+}
+
+/* Hamburger button color */
+.nav-hamburger {
+  @apply text-white;
+}
+nav.scrolled .nav-hamburger,
+nav.bg-white .nav-hamburger {
+  @apply text-on-surface;
 }
