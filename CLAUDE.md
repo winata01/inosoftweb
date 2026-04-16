@@ -30,6 +30,23 @@ This is a **multi-page static site** built with Vite + Tailwind CSS v4. There is
 - Utility classes: `.glass` (glassmorphism), `.hero-gradient`, `.btn-gradient`
 - Nav scroll state toggled by adding/removing the `scrolled` class on `#mainNav` via JS
 
+**Color palette**
+#### Core (Fixed)
+| Role | Name | Hex |
+|------|------|-----|
+| Primary Brand | Turquoise | `#00B5B5` |
+| Background | Deep Navy | `#001A33` |
+| Surface Layer | Surface Dark | `#0A2540` |
+| Typography | White | `#FFFFFF` |
+| Neutral Detail | Muted Gray | `#94A3B8` |
+
+#### Accents (Explorable)
+| Role | Name | Hex | Status |
+|------|------|-----|--------|
+| Friendly Pop | Warm Coral | `#FF6B6B` | Use for alerts/CTAs only |
+| High-Tech Signal | Electric Lime | `#EAB308` | Under review |
+| Creative/Premium | Vibrant Magenta | `#D946EF` | Preferred accent |
+
 **Icons** — Lucide icons loaded via CDN (`unpkg.com/lucide`), initialized with `lucide.createIcons()` in each page's inline script.
 
 **Assets** (`assets/`):

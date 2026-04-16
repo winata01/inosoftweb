@@ -12,6 +12,9 @@
   --color-surface-lowest: #ffffff;
   --color-on-surface: #161d1d;
   --color-outline-variant: #bbc9c9;
+  --color-accent: #D946EF;
+  --color-coral: #FF6B6B;
+  --color-lime: #EAB308;
 
   --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
 
